@@ -61,3 +61,64 @@ while numero_usuario != n_secreto:
 
 print(f"¡Has acertado! El número era: {n_secreto}. Te has tardado {intentos} intentos.")
 
+# 6. Números pares en descendente #
+
+num = int
+for num in range(100, 0, -1):
+    print(num)
+
+# 7. Suma de números comprendidos en 0 #
+
+n = int(input("Introduce un entero positivo (>= 0): "))
+
+suma = 0
+for i in range(n + 1):
+    suma += i
+
+print(f"La suma de 0 a {n} es: {suma}")
+
+# 8. Indicación de pares, impares, negativos y positivos #
+
+numero = 100
+pares = impares = negativos = positivos = 0
+
+for i in range(numero):
+    n = int(input(f"Ingrese el número {i+1}/{numero}: "))
+
+    if n % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+
+    if n > 0:
+        positivos += 1
+    elif n < 0:
+        negativos += 1
+
+print(f"Pares: {pares}")
+print(f"Impares: {impares}")
+print(f"Positivos: {positivos}")
+print(f"Negativos: {negativos}")
+
+# 9. Cálculo de media de 100 valores #
+
+numero = 100
+total = 0
+
+for i in range(numero):
+    n = int(input(f"Ingrese el número {i+1}/{numero}: "))
+    total += n
+
+media = total / numero
+print(f"La media es: {media}")
+
+# 10. Inversión de números #
+
+numero = int(input("Ingresá un entero: "))
+
+signo = -1 if numero < 0 else 1
+s = str(abs(numero))
+invertido = int(s[::-1])
+resultado = signo * invertido
+
+print("Número invertido:", resultado)
